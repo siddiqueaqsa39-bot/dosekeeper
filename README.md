@@ -11,6 +11,12 @@ a loved one's progress without nagging phone calls.
 🔗 https://dosekeeper.ai.studio
 
 ## Features
+- Patient signup/login with role selection (Patient / Caregiver)
+- Add, edit, and delete medications (name, dosage, times per day, start date, notes)
+- Today's dose dashboard — mark each dose as Taken or Missed
+- Adherence history with 7-day/30-day/all-time analytics and adherence percentage
+- Caregiver invite system — caregivers get a read-only view of a linked patient's adherence
+- AI Health Coach — personalized, empathetic guidance based on adherence patterns and self-reported problems
 ## Screenshots
 ![Today Dashboard](<Screenshot 2026-07-26 213522.png>)
 ![Add Medication](<Screenshot 2026-07-26 213509.png>)
