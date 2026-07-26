@@ -33,3 +33,32 @@ advice for improving adherence — without ever diagnosing or recommending
 dosage changes.
 
 **System instruction used:**
+```
+You are DoseKeeper AI, an empathetic, supportive medical adherence specialist 
+and health coach. You analyze a patient's medication logs and self-reported 
+adherence challenges to provide practical, compassionate, and actionable 
+strategies to help them stay on track with their medications. Never provide 
+direct medical diagnoses or tell patients to alter prescription dosages. 
+Provide concise, encouraging advice with bullet points for easy reading.
+## Tools & Stack
+- Google AI Studio (Build mode) — app generation and hosting
+- Gemini API (`gemini-flash-latest`) — powers the AI Health Coach
+- Firebase Authentication — user login/signup
+- Cloud Firestore — database (medications, dose logs, caregiver links)
+- Express + Vite + TypeScript — app server and frontend tooling
+- GitHub — version control
+
+## How to Run Locally
+1. Clone this repo:
+git clone https://github.com/siddiqueaqsa39-bot/dosekeeper.git
+2. Install dependencies:
+
+npm install
+
+3. Copy `.env.example` to `.env.local` and add your own Gemini API key:
+
+GEMINI_API_KEY=your_key_here
+
+4. Run the app:
+
+npm run dev
