@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# DoseKeeper
 
-# Run and deploy your AI Studio app
+## Problem
+DoseKeeper solves medication adherence issues for people managing multiple 
+prescriptions — especially elderly or chronically ill patients (e.g. 
+diabetics, hypertension patients) who forget doses or take them at the 
+wrong times. It also gives family caregivers a simple way to check in on 
+a loved one's progress without nagging phone calls.
 
-This contains everything you need to run your app locally.
+## Live App
+🔗 https://dosekeeper.ai.studio
 
-View your app in AI Studio: https://ai.studio/apps/7f1294d6-d69b-4398-8f41-b013d936b650
+## Features
+- Patient signup/login with role selection (Patient / Caregiver)
+- Add, edit, and delete medications (name, dosage, times per day, start date, notes)
+- Today's dose dashboard — mark each dose as Taken or Missed
+- Adherence history with 7-day/30-day/all-time analytics and adherence percentage
+- Caregiver invite system — caregivers get a read-only view of a linked patient's adherence
+- AI Health Coach — personalized, empathetic guidance based on adherence patterns and self-reported problems
 
-## Run Locally
+## AI Feature
+The **DoseKeeper AI Health Coach** lets patients describe a problem in plain 
+language (e.g. "I keep forgetting my evening pill"). It sends their recent 
+dose logs, active medications, and free-text input to the Gemini API 
+(`gemini-flash-latest`), which returns compassionate, practical, bullet-point 
+advice for improving adherence — without ever diagnosing or recommending 
+dosage changes.
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**System instruction used:**
