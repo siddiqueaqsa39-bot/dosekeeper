@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profiles and roles (patient or caregiver)",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["patient", "caregiver"] },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "role"]
+    },
+    "medications": {
+      "title": "Medications",
+      "description": "Patient medications",
+      "type": "object",
+      "properties": {
+        "patientUid": { "type": "string" },
+        "name": { "type": "string" },
+        "dosage": { "type": "string" },
+        "timesPerDay": { "type": "integer" },
+        "startDate": { "type": "string" },
+        "notes": { "type": "string" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientUid", "name", "dosage", "timesPerDay", "startDate"]
+    },
+    "doseLogs": {
+      "title": "Dose Logs",
+      "description": "Dose completion logs for patients",
+      "type": "object",
+      "properties": {
+        "patientUid": { "type": "string" },
+        "medicationId": { "type": "string" },
+        "medicationName": { "type": "string" },
+        "dosage": { "type": "string" },
+        "date": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "status": { "type": "string", "enum": ["taken", "missed"] },
+        "loggedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientUid", "medicationId", "date", "status"]
+    },
+    "caregiverLinks": {
+      "title": "Caregiver Links",
+      "description": "Invitations and links between patients and caregivers",
+      "type": "object",
+      "properties": {
+        "patientUid": { "type": "string" },
+        "patientEmail": { "type": "string" },
+        "caregiverEmail": { "type": "string" },
+        "caregiverUid": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "accepted"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientUid", "patientEmail", "caregiverEmail", "status"]
+    },
+    "aiInsights": {
+      "title": "AI Insights",
+      "description": "AI generated adherence insights and advice for patients",
+      "type": "object",
+      "properties": {
+        "patientUid": { "type": "string" },
+        "patientProblemText": { "type": "string" },
+        "advice": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientUid", "advice", "createdAt"]
+    }
+  }
+}

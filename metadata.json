@@ -1,0 +1,6 @@
+{
+  "name": "DoseKeeper",
+  "description": "A full-stack medication adherence web app with patient tracking and caregiver read-only monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
